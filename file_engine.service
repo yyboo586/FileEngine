@@ -1,0 +1,13 @@
+[Unit]
+Description=FileEngine Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/usr/share/file_engine
+ExecStart=/usr/share/file_engine/file_engine
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
